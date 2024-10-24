@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="{{asset('admin/css/adminlte.css')}}"><!--end::Required Plugin(AdminLTE)-->
 </head> <!--end::Head--> <!--begin::Body-->
 
-<body class="login-page bg-body-secondary">
+<body class="login-page bg-body-secondary" style="background-color:#FFE7D7 !important;">
     <div class="login-box">
-        <div class="card card-outline card-primary">
-            <div class="card-header"> <a href="../index2.html" class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover">
-                    <h1 class="mb-0"> <b>Admin</b>LTE
+        <div class="card card-outline card-danger">
+            <div class="card-header"> <a href="#" class="text-center link-opacity-50-hover vv-logo">
+                    <h1 class="mb-0"> <b>Vurivoz</b>
                     </h1>
                 </a> </div>
             <div class="card-body login-card-body">
@@ -33,24 +33,24 @@
                         <div class="form-floating"> <input id="loginPassword" type="password" class="form-control" placeholder=""> <label for="loginPassword">Password</label> </div>
                         <div class="input-group-text"> <span class="bi bi-lock-fill"></span> </div>
                     </div> <!--begin::Row-->
-                    <div class="row">
+                    <div class="row mt-3" >
                         <div class="col-8 d-inline-flex align-items-center">
                             <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault">
                                     Remember Me
                                 </label> </div>
                         </div> <!-- /.col -->
-                        <div class="col-4">
-                            <div class="d-grid gap-2"> <button type="submit" class="btn btn-primary">Sign In</button> </div>
+                        <div class="col-4 ">
+                            <div class="d-grid gap-2"> <button type="submit" class="btn btn-danger">Sign In</button> </div>
                         </div> <!-- /.col -->
                     </div> <!--end::Row-->
                 </form>
                 <div class="social-auth-links text-center mb-3 d-grid gap-2">
-                    <p>- OR -</p> <a href="#" class="btn btn-primary"> <i class="bi bi-facebook me-2"></i> Sign in using Facebook
-                    </a> <a href="#" class="btn btn-danger"> <i class="bi bi-google me-2"></i> Sign in using Google+
+                    <p>- OR -</p> 
+                    </a> <a href="#" class="btn btn-danger"> <i class="bi bi-google me-2"></i> Sign in using Google
                     </a>
                 </div> <!-- /.social-auth-links -->
-                <p class="mb-1"> <a href="forgot-password.html">I forgot my password</a> </p>
-                <p class="mb-0"> <a href="register.html" class="text-center">
+                <p class="mb-1"> <a class="vv-link-non-dec" href="forgot-password.html">I forgot my password</a> </p>
+                <p class="mb-0"> <a class="vv-link-non-dec" href="register.html" class="text-center">
                         Register a new membership
                     </a> </p>
             </div> <!-- /.login-card-body -->
