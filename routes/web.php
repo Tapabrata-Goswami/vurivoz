@@ -13,9 +13,9 @@ Route::get('/auth/otp-validation', [AuthController::class, 'OtpValidateView'])->
 Route::post('/auth/otp-validation', [AuthController::class, 'OtpValidatePost'])->name('OtpValidatePost');
 
 Route::get('/auth/login', [AuthController::class,'AdminLoginView'])->name('AdminLoginView');
-// Route::get('/', function () {
-//     return view('auth.adminLogin');
-// });
+Route::get('/', function () {
+    return view('auth.adminLogin');
+});
 
 // Authentication --
 
