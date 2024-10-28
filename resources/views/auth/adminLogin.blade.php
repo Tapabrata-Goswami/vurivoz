@@ -18,7 +18,8 @@
 <body class="login-page bg-body-secondary" style="background-color:#FFE7D7 !important;">
     <div class="login-box">
         <div class="card card-outline card-danger">
-            <div class="card-header"> <a href="#" class="text-center link-opacity-50-hover vv-logo">
+            <div class="card-header"> 
+                <a href="#" class="text-center link-opacity-50-hover vv-logo">
                     <h1 class="mb-0"> <b>Vurivoz</b>
                     </h1>
                 </a> </div>
