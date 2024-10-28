@@ -92,7 +92,6 @@ class AuthController extends Controller
 
 
     public function OtpValidatePost(Request $request){
-        // dd($request);
 
         $rules = [
             'otp' => ['required'],
@@ -117,6 +116,8 @@ class AuthController extends Controller
 
             $admin->status = 1;
             $admin->email_verification = 1;
+            $admin->save();
+
             return redirect()->route('AdminDashboard')->with('success', 'Verification code sent successfully!');
         }else{
             return redirect()->back()->withErrors([
