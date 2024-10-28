@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>AdminLTE 4 | Login Page v2</title><!--begin::Primary Meta Tags-->
+    <title>Vurivoz | Otp validate</title><!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="AdminLTE 4 | Login Page v2">
     <meta name="author" content="ColorlibHQ">
@@ -24,40 +24,30 @@
                     </h1>
                 </a> </div>
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
-                <form action="" method="post">
+                <p class="login-box-msg">Enter your verification code.</p>
+                <form action="{{route('OtpValidatePost')}}" method="post">
                     @csrf
                     <div class="input-group mb-1">
-                        <div class="form-floating"> <input id="loginEmail" type="email" class="form-control" value="" placeholder=""> <label for="loginEmail">Email</label> </div>
+                        <div class="form-floating"> <input id="verifyOtp" type="number" class="form-control" value="" placeholder="" name="otp"> <label for="verifyOtp">Veification code</label> </div>
                         <div class="input-group-text"> <span class="bi bi-envelope"></span> </div>
                     </div>
-                    <div class="input-group mb-1">
-                        <div class="form-floating"> <input id="loginPassword" type="password" class="form-control" placeholder=""> <label for="loginPassword">Password</label> </div>
-                        <div class="input-group-text"> <span class="bi bi-lock-fill"></span> </div>
-                    </div> <!--begin::Row-->
+                    @if ($errors->has('otp'))
+                        <span class="text-danger">{{ $errors->first('otp') }}</span>
+                    @endif 
+                    <!--begin::Row-->
                     <div class="row mt-3" >
                         <div class="col-8 d-inline-flex align-items-center">
-                            <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault">
-                                    Remember Me
-                                </label> </div>
+                            <button class="vv-link-non-dec" style="border:none;background-color:transparent;">Resend Verification Code</button>
                         </div> <!-- /.col -->
                         <div class="col-4 ">
                             <div class="d-grid gap-2"> <button type="submit" class="btn btn-danger">Sign In</button> </div>
                         </div> <!-- /.col -->
                     </div> <!--end::Row-->
                 </form>
-                <!-- <div class="social-auth-links text-center mb-3 d-grid gap-2">
-                    <p>- OR -</p> 
-                    </a> <a href="#" class="btn btn-danger"> <i class="bi bi-google me-2"></i> Sign in using Google
-                    </a>
-                </div> /.social-auth-links -->
-                <p class="mb-1"> <a class="vv-link-non-dec" href="forgot-password.html">I forgot my password</a> </p>
-                <p class="mb-0"> <a class="vv-link-non-dec" href="{{route('AdminSigninView')}}" class="text-center">
-                        Register a new membership
-                    </a> </p>
+                
             </div> <!-- /.login-card-body -->
         </div>
-    </div> <!-- /.login-box --> <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    </div> 
     <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/browser/overlayscrollbars.browser.es6.min.js" integrity="sha256-H2VM7BKda+v2Z4+DRy69uknwxjyDRhszjXFhsL4gD3w=" crossorigin="anonymous"></script> <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script> <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
