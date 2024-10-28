@@ -105,7 +105,7 @@
         </nav> <!--end::Header--> <!--begin::Sidebar-->
         <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark"> <!--begin::Sidebar Brand-->
             <div class="sidebar-brand"> <!--begin::Brand Link--> <a href="#" class="text-center link-opacity-50-hover vv-logo">
-                    <h1 class="mb-0"> <b>Vurivoz</b>
+                    <h1 class="my-2"> <b style="color:#fff;">Vurivoz</b>
                     </h1>
                 </a> <!--end::Brand Link--> </div> <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
             <div class="sidebar-wrapper">
