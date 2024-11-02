@@ -5,8 +5,6 @@ use App\Http\Controllers\Auth\AuthController;
 
 
 
-
-
 Route::get('/auth/sign',[AuthController::class,'AdminSigninView'])->name('AdminSigninView');
 Route::post('/auth/sign',[AuthController::class,'AdminSigninPost'])->name('AdminSigninPost');
 Route::get('/auth/otp-validation', [AuthController::class, 'OtpValidateView'])->name('OtpValidateView');
