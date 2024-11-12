@@ -42,7 +42,7 @@ return new class extends Migration
         Schema::create('restaurent_decoration', function (Blueprint $table) {
             $table->id();
             $table->foreignId('restaurent_id')->constrained('restaurent')->onDelete('cascade');
-            $table->string('background_image');
+            $table->string('background_image')->nullable();
             $table->string('background_video')->nullable();
             $table->string('tagline')->nullable();
             $table->string('description')->nullable();
