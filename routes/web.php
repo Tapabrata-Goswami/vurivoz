@@ -24,3 +24,7 @@ Route::get('/dashboard', function(){
 Route::get('/restaurent-registration', function(){
     return view('auth.restaurentRegistration');
 });
+
+Route::get('/new/restaurent-registration', function(){
+    return view('restaurent.registrationPrePage');
+});
